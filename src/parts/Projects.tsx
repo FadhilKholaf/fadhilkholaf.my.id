@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import "@/app/globals.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Projects() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -69,23 +70,47 @@ export default function Projects() {
         PROJECTS
       </h1>
       <div className="flex h-full w-full flex-col text-base md:text-2xl ">
-        <div className="project group relative flex justify-between py-2 hover:bg-secondary hover:text-primary">
-          <p className="w-full text-nowrap ">Antareja</p>
-          <p className="w-1/2 text-nowrap text-center">Frontend Developer</p>
-          <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
-            Malang, May 2024
-          </p>
-          <div className="invisible absolute -top-1/2 left-[15%] z-10 w-[20vw] lg:group-hover:visible">
-            <Image
-              src="/images/antareja.png"
-              alt="project"
-              width={500}
-              height={500}
-              className=" h-full w-full object-cover"
-            />
+        <Link href="https://github.com/mokletdev/antareja" target="_blank">
+          <div className="project group relative flex justify-between py-2 hover:bg-secondary hover:text-primary">
+            <p className="w-full text-nowrap ">Antareja</p>
+            <p className="w-1/2 text-nowrap text-center">Frontend Developer</p>
+            <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
+              Malang, May 2024
+            </p>
+            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
+              <Image
+                src="/images/antareja.png"
+                alt="antareja"
+                width={500}
+                height={500}
+                className=" h-full object-cover"
+              />
+            </div>
+            <span className="absolute bottom-0 z-0 h-1 w-full bg-secondary"></span>
           </div>
-          <span className="absolute bottom-0 z-0 h-1 w-full bg-secondary"></span>
-        </div>
+        </Link>
+        <Link
+          href="https://github.com/FadhilKholaf/Moklet-Merchandise-Remake-Backend"
+          target="_blank"
+        >
+          <div className="project group relative flex justify-between py-2 hover:bg-secondary hover:text-primary">
+            <p className="w-full text-nowrap ">Ecommerce</p>
+            <p className="w-1/2 text-nowrap text-center">Backend Developer</p>
+            <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
+              Malang, April 2024
+            </p>
+            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] bg-red-50 lg:group-hover:visible">
+              <Image
+                src="/images/ecommerce.png"
+                alt="ecommerce"
+                width={500}
+                height={500}
+                className="h-full object-cover"
+              />
+            </div>
+            <span className="absolute bottom-0 z-0 h-1 w-full bg-secondary"></span>
+          </div>
+        </Link>
       </div>
     </section>
   );
