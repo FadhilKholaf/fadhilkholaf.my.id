@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Alice } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import LocomotiveScrollProvider from "@/providers/LocomotiveScrollProvider";
 
-const alice = Alice({ weight: "400", subsets: ["latin"] });
+const playfairDisplay = Playfair_Display({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Fadhil Kholaf",
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="overflow-x-hidden bg-primary">
-      <body className={alice.className}>
+      <body className={playfairDisplay.className}>
         <LocomotiveScrollProvider>{children}</LocomotiveScrollProvider>
       </body>
     </html>

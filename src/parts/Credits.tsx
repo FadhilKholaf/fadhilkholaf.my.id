@@ -13,7 +13,7 @@ export default function Credits() {
   return (
     <section
       id="credits"
-      className="flex min-h-screen flex-wrap items-center bg-primary pb-4 pl-12 pr-4 pt-4 text-secondary"
+      className="flex min-h-screen flex-wrap items-center bg-primary py-12 pb-4 pl-12 pr-4 text-secondary"
     >
       <div className="flex w-full flex-wrap justify-between">
         <div className="mb-8 flex w-auto flex-col gap-y-4">
@@ -179,55 +179,14 @@ export default function Credits() {
             enableDamping={false}
             enablePan={false}
             autoRotateSpeed={2}
-            minDistance={5}
-            maxDistance={30}
+            enableZoom={false}
             autoRotate
           />
           {model && (
-            <>
-              <group>
-                <mesh scale={3} position={[-4, 4, 0]}>
-                  <boxGeometry />
-                  <meshNormalMaterial />
-                </mesh>
-                <mesh scale={3} position={[4, 4, 0]}>
-                  <boxGeometry />
-                  <meshNormalMaterial />
-                </mesh>
-                <mesh scale={3} position={[0, 4, 0]}>
-                  <boxGeometry />
-                  <meshNormalMaterial />
-                </mesh>
-              </group>
-              <group>
-                <mesh scale={3} position={[4, 0, 0]}>
-                  <boxGeometry />
-                  <meshNormalMaterial />
-                </mesh>
-                <mesh scale={3} position={[-4, 0, 0]}>
-                  <boxGeometry />
-                  <meshNormalMaterial />
-                </mesh>
-                <mesh scale={3}>
-                  <boxGeometry />
-                  <meshNormalMaterial />
-                </mesh>
-              </group>
-              <group>
-                <mesh scale={3} position={[0, -4, 0]}>
-                  <boxGeometry />
-                  <meshNormalMaterial />
-                </mesh>
-                <mesh scale={3} position={[4, -4, 0]}>
-                  <boxGeometry />
-                  <meshNormalMaterial />
-                </mesh>
-                <mesh scale={3} position={[-4, -4, 0]}>
-                  <boxGeometry />
-                  <meshNormalMaterial />
-                </mesh>
-              </group>
-            </>
+            <mesh scale={7} position={[0, -0.5, 0]}>
+              <boxGeometry />
+              <meshNormalMaterial />
+            </mesh>
           )}
           <EffectComposer>{ascii && <ASCII />}</EffectComposer>
         </Canvas>

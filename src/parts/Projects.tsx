@@ -64,16 +64,16 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="min-h-screen bg-primary pl-12 pr-4 pt-4 text-secondary"
+      className="min-h-fit bg-primary py-12 pl-12 pr-4 text-secondary"
     >
       <h1 ref={headingRef} className="mb-8 text-5xl md:text-7xl">
         PROJECTS
       </h1>
       <div className="flex h-full w-full flex-col text-base md:text-2xl ">
-        <Link href="https://github.com/mokletdev/antareja" target="_blank">
+        <Link href="https://antareja.smktelkom-mlg.sch.id" target="_blank">
           <div className="project group relative flex justify-between py-2 hover:bg-secondary hover:text-primary">
             <p className="w-full text-nowrap ">Antareja</p>
-            <p className="w-1/2 text-nowrap text-center">Frontend Developer</p>
+            <p className="w-1/2 text-nowrap text-center">Frontend</p>
             <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
               Malang, May 2024
             </p>
@@ -90,22 +90,79 @@ export default function Projects() {
           </div>
         </Link>
         <Link
-          href="https://github.com/FadhilKholaf/Moklet-Merchandise-Remake-Backend"
+          href="https://github.com/FadhilKholaf/UKL-Node-Backend-Ganjil"
           target="_blank"
         >
           <div className="project group relative flex justify-between py-2 hover:bg-secondary hover:text-primary">
-            <p className="w-full text-nowrap ">Ecommerce</p>
-            <p className="w-1/2 text-nowrap text-center">Backend Developer</p>
+            <p className="w-full text-nowrap ">UKL Ganjil</p>
+            <p className="w-1/2 text-nowrap text-center">Backend</p>
             <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
-              Malang, April 2024
+              Malang, May 2024
             </p>
-            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] bg-red-50 lg:group-hover:visible">
+            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
               <Image
-                src="/images/ecommerce.png"
-                alt="ecommerce"
+                src="/images/ukl.png"
+                alt="ukl"
                 width={500}
                 height={500}
-                className="h-full object-cover"
+                className=" h-full object-cover"
+              />
+            </div>
+            <span className="absolute bottom-0 z-0 h-1 w-full bg-secondary"></span>
+          </div>
+        </Link>
+        <Link href="https://hillaryours.fadhilkholaf.my.id" target="_blank">
+          <div className="project group relative flex justify-between py-2 hover:bg-secondary hover:text-primary">
+            <p className="w-full text-nowrap ">Hillaryours</p>
+            <p className="w-1/2 text-nowrap text-center">Frontend</p>
+            <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
+              Malang, June 2024
+            </p>
+            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
+              <Image
+                src="/images/hillaryours.png"
+                alt="hillaryours"
+                width={500}
+                height={500}
+                className=" h-full object-cover"
+              />
+            </div>
+            <span className="absolute bottom-0 z-0 h-1 w-full bg-secondary"></span>
+          </div>
+        </Link>
+        <Link href="https://3.fadhilkholaf.my.id" target="_blank">
+          <div className="project group relative flex justify-between py-2 hover:bg-secondary hover:text-primary">
+            <p className="w-full text-nowrap ">3</p>
+            <p className="w-1/2 text-nowrap text-center">Frontend</p>
+            <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
+              Malang, June 2024
+            </p>
+            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
+              <Image
+                src="/images/3.png"
+                alt="3"
+                width={500}
+                height={500}
+                className=" h-full object-cover"
+              />
+            </div>
+            <span className="absolute bottom-0 z-0 h-1 w-full bg-secondary"></span>
+          </div>
+        </Link>
+        <Link href="https://github.com/FadhilKholaf/dot-intern" target="_blank">
+          <div className="project group relative flex justify-between py-2 hover:bg-secondary hover:text-primary">
+            <p className="w-full text-nowrap ">DOT Intern Test</p>
+            <p className="w-1/2 text-nowrap text-center">Backend</p>
+            <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
+              Malang, June 2024
+            </p>
+            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
+              <Image
+                src="/images/dot.png"
+                alt="dot"
+                width={500}
+                height={500}
+                className=" h-full object-cover"
               />
             </div>
             <span className="absolute bottom-0 z-0 h-1 w-full bg-secondary"></span>
