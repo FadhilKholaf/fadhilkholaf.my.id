@@ -31,14 +31,14 @@ export default function LeftSidebar() {
 
   return (
     <aside className="fixed z-50 flex h-screen w-8 flex-col items-center justify-center gap-16 overflow-hidden bg-secondary text-primary lg:w-12">
-      <p className="absolute top-10 -rotate-90 text-nowrap font-semibold text-accent">
+      <p className="fixed top-10 -rotate-90 text-nowrap font-semibold text-accent">
         {!loading ? "Dev" : progress}
         <span className="animate-pulse">{" - /*"}</span>
       </p>
       <SidebarItem text="Home" scrollTo="#home" className="delay-300" />
       <SidebarItem text="Projects" scrollTo="#projects" className="delay-200" />
       <SidebarItem text="Credits" scrollTo="#credits" />
-      <p className="absolute bottom-10 -rotate-90 text-nowrap font-semibold text-accent">
+      <p className="fixed bottom-10 -rotate-90 text-nowrap font-semibold text-accent">
         {!loading ? "Scroll" : "Loading"}
         <span className="animate-pulse">{" - />"}</span>
       </p>
