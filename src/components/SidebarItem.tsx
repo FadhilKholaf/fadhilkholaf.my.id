@@ -23,7 +23,7 @@ export default function SidebarItem({
       data-scroll
       data-scroll-to
       className={cn(
-        "link translate-x-8 -rotate-90 font-semibold transition-all duration-500 ease-out",
+        "translate-x-8 -rotate-90 font-semibold transition-all duration-500 ease-out",
         className,
         {
           "translate-x-0": !loading,

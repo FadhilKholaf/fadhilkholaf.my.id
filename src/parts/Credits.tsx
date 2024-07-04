@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export default function Credits() {
   const [model, setmodel] = useState<any>(true);
-  const [ascii, setAscii] = useState<any>(false);
+  const [ascii, setAscii] = useState<any>(true);
 
   return (
     <section
@@ -24,7 +24,7 @@ export default function Credits() {
             </span>
             <Link
               href="https://locomotive.ca/en"
-              className=" text-lg underline md:text-2xl"
+              className="text-lg underline md:text-2xl"
             >
               Locomotive
             </Link>
@@ -36,7 +36,7 @@ export default function Credits() {
             </span>
             <Link
               href="https://studiofreight.com"
-              className=" text-lg underline md:text-2xl"
+              className="text-lg underline md:text-2xl"
             >
               Studio Freight
             </Link>
@@ -48,7 +48,7 @@ export default function Credits() {
             </span>
             <Link
               href="https://www.awwwards.com"
-              className=" text-lg underline md:text-2xl"
+              className="text-lg underline md:text-2xl"
             >
               Awwwards
             </Link>
@@ -60,7 +60,7 @@ export default function Credits() {
             </span>
             <Link
               href="https://quentinhocde.com"
-              className=" text-lg underline md:text-2xl"
+              className="text-lg underline md:text-2xl"
             >
               Quentinhocde
             </Link>
@@ -72,7 +72,7 @@ export default function Credits() {
             </span>
             <Link
               href="https://www.dragonfly.xyz"
-              className=" text-lg underline md:text-2xl"
+              className="text-lg underline md:text-2xl"
             >
               Dragonfly
             </Link>
@@ -87,7 +87,7 @@ export default function Credits() {
             </span>
             <Link
               href="https://nextjs.org"
-              className=" text-lg underline md:text-2xl"
+              className="text-lg underline md:text-2xl"
             >
               NextJS
             </Link>
@@ -99,7 +99,7 @@ export default function Credits() {
             </span>
             <Link
               href="https://tailwindcss.com"
-              className=" text-lg underline md:text-2xl"
+              className="text-lg underline md:text-2xl"
             >
               Tailwind
             </Link>
@@ -111,7 +111,7 @@ export default function Credits() {
             </span>
             <Link
               href="https://locomotivemtl.github.io/locomotive-scroll"
-              className=" text-lg underline md:text-2xl"
+              className="text-lg underline md:text-2xl"
             >
               Locomotive Scroll
             </Link>
@@ -121,13 +121,13 @@ export default function Credits() {
             <span className="animate-pulse text-lg md:text-2xl">{"3D - "}</span>
             <Link
               href="https://docs.pmnd.rs/react-three-fiber"
-              className=" text-lg underline md:text-2xl"
+              className="text-lg underline md:text-2xl"
             >
               React Three Fiber
             </Link>
             <span className="animate-pulse text-lg md:text-2xl">{" - /#"}</span>
           </span>
-          <span className=" flex gap-4">
+          <span className="flex gap-4">
             <span>#000000</span>
             <span>#F5F5F5</span>
             <span>#007BFF</span>
@@ -141,7 +141,7 @@ export default function Credits() {
             </span>
             <Link
               href="https://instagram.com/fadhilkholaf"
-              className=" text-lg underline md:text-2xl"
+              className="text-lg underline md:text-2xl"
             >
               fadhilkholaf
             </Link>
@@ -151,7 +151,7 @@ export default function Credits() {
             <span className="animate-pulse text-lg md:text-2xl">
               {"Email - "}
             </span>
-            <span className=" text-lg md:text-2xl">fadhilgd123@gmail.com</span>
+            <span className="text-lg md:text-2xl">fadhilgd123@gmail.com</span>
             <span className="animate-pulse text-lg md:text-2xl">{" - /@"}</span>
           </span>
         </div>

@@ -10,6 +10,7 @@ import Navbar from "@/components/Navbar";
 import Credits from "@/parts/Credits";
 import Footer from "@/components/Footer";
 import Intro from "@/parts/Intro";
+import Cursor from "@/components/Cursor";
 
 export default function Page() {
   const [loading, setLoading] = useState(true);
@@ -20,6 +21,7 @@ export default function Page() {
 
   return (
     <main className={cn({ fixed: loading })}>
+      <Cursor />
       <LeftSidebar />
       <Navbar />
       <Footer />

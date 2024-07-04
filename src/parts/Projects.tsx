@@ -77,7 +77,7 @@ export default function Projects() {
             <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
               Malang, May 2024
             </p>
-            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
+            <div className="invisible absolute -top-1/2 left-[20%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
               <Image
                 src="/images/antareja.png"
                 alt="antareja"
@@ -99,7 +99,7 @@ export default function Projects() {
             <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
               Malang, May 2024
             </p>
-            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
+            <div className="invisible absolute -top-1/2 left-[20%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
               <Image
                 src="/images/ukl.png"
                 alt="ukl"
@@ -118,7 +118,7 @@ export default function Projects() {
             <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
               Malang, June 2024
             </p>
-            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
+            <div className="invisible absolute -top-1/2 left-[20%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
               <Image
                 src="/images/hillaryours.png"
                 alt="hillaryours"
@@ -137,7 +137,7 @@ export default function Projects() {
             <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
               Malang, June 2024
             </p>
-            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
+            <div className="invisible absolute -top-1/2 left-[20%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
               <Image
                 src="/images/3.png"
                 alt="3"
@@ -156,7 +156,7 @@ export default function Projects() {
             <p className="invisible w-0 text-nowrap text-end md:visible md:w-full">
               Malang, June 2024
             </p>
-            <div className="invisible absolute -top-1/2 left-[15%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
+            <div className="invisible absolute -top-1/2 left-[20%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
               <Image
                 src="/images/dot.png"
                 alt="dot"
