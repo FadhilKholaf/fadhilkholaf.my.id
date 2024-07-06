@@ -1,16 +1,16 @@
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { FlowerModel } from "../components/FlowerModel";
-import { ASCII, EffectComposer } from "@react-three/postprocessing";
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import { FlowerModel } from './ui/FlowerModel';
+import { ASCII, EffectComposer } from '@react-three/postprocessing';
 
 export default function Flower() {
   return (
     <section
       className="fixed left-0 top-0 -z-20 h-screen w-screen"
       data-scroll
-      data-scroll-speed="0.6"
+      data-scroll-speed="0.3"
     >
-      <Canvas>
+      <Canvas performance={{ max: 0.1 }}>
         <PerspectiveCamera makeDefault position={[3, 1, 0]} />
         <ambientLight intensity={3} />
         <OrbitControls

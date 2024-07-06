@@ -1,32 +1,32 @@
-"use client";
+'use client';
 
-import LeftSidebar from "@/components/LeftSidebar";
-import Home from "@/parts/Home";
-import { useState } from "react";
-import { cn } from "@/utils/cn";
-import Flower from "@/parts/Flower";
-import Projects from "@/parts/Projects";
-import Navbar from "@/components/Navbar";
-import Credits from "@/parts/Credits";
-import Footer from "@/components/Footer";
-import Intro from "@/parts/Intro";
-import Cursor from "@/components/Cursor";
+import Sidebar from '@/components/Sidebar';
+import Home from '@/components/parts/Home';
+import Flower from '@/components/Flower';
+import Projects from '@/components/parts/Projects';
+import Header from '@/components/Header';
+import Credits from '@/components/parts/Credits';
+import Footer from '@/components/Footer';
+import Intro from '@/components/Intro';
+import Cursor from '@/components/Cursor';
+import { useEffect, useState } from 'react';
+import { cn } from '@/utils/cn';
 
 export default function Page() {
-  const [loading, setLoading] = useState(true);
-
-  setTimeout(() => {
-    setLoading(false);
-  }, 1500);
-
+  const [loading, setLoading] = useState<boolean>(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
+  }, []);
   return (
     <main className={cn({ fixed: loading })}>
       <Cursor />
-      <LeftSidebar />
-      <Navbar />
+      <Sidebar />
+      <Header />
       <Footer />
-      <main className="overflow-hidden md:pl-4">
-        {loading && <Intro />}
+      <main className="modal overflow-hidden md:pl-4">
+        <Intro />
         <Home />
         <Flower />
         <Projects />

@@ -1,11 +1,11 @@
-import { cn } from "@/utils/cn";
-import Link from "next/link";
-import { useState } from "react";
+import { cn } from '@/utils/cn';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function SidebarItem({
   text,
   scrollTo,
-  className,
+  className
 }: {
   text: string;
   scrollTo: string;
@@ -13,9 +13,11 @@ export default function SidebarItem({
 }) {
   const [loading, setLoading] = useState(true);
 
-  setTimeout(() => {
-    setLoading(false);
-  }, 1000);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   return (
     <Link
@@ -23,11 +25,11 @@ export default function SidebarItem({
       data-scroll
       data-scroll-to
       className={cn(
-        "translate-x-8 -rotate-90 font-semibold transition-all duration-500 ease-out",
+        'translate-x-8 -rotate-90 font-semibold transition-all duration-500 ease-out',
         className,
         {
-          "translate-x-0": !loading,
-        },
+          'translate-x-0': !loading
+        }
       )}
     >
       {text}

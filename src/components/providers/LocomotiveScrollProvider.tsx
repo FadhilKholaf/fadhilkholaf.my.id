@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 export default function LocomotiveScrollProvider({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    let scroll: import("locomotive-scroll");
-    import("locomotive-scroll").then((locomotiveModule) => {
+    let scroll: import('locomotive-scroll');
+    import('locomotive-scroll').then((locomotiveModule) => {
       scroll = new locomotiveModule.default({ lerp: 1 });
     });
 

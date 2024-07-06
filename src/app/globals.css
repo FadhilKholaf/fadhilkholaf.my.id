@@ -40,10 +40,3 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--primary) var(--secondary);
 }
-
-body {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
