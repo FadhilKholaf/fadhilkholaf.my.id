@@ -4,8 +4,8 @@ import SidebarItem from './SidebarItem';
 export default function Sidebar() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
-  const [open, setOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+  // const [open, setOpen] = useState(false);
+  // const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -44,7 +44,7 @@ export default function Sidebar() {
   // }
 
   return (
-    <aside className="fixed z-50 flex h-screen w-8 flex-col items-center justify-center gap-16 overflow-hidden bg-secondary text-primary lg:w-12">
+    <aside className="fixed z-50 flex h-screen w-8 flex-col items-center justify-center gap-16 overflow-hidden bg-secondary text-primary md:w-12">
       <p className="fixed top-12 -rotate-90 text-nowrap font-semibold text-accent">
         {progress === 100 ? 'Dev' : progress}
         <span className="animate-pulse">{' - /*'}</span>
