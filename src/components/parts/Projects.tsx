@@ -64,7 +64,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="min-h-fit bg-primary py-12 pl-12 pr-4 text-secondary"
+      className="min-h-fit w-screen bg-primary py-12 pl-12 pr-4 text-secondary md:pr-10"
     >
       <h1 ref={headingRef} className="mb-8 text-5xl md:text-7xl">
         PROJECTS

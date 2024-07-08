@@ -1,6 +1,9 @@
 export default function Home() {
   return (
-    <section id="home" className="flex h-screen items-center justify-center">
+    <section
+      id="home"
+      className="flex h-screen w-screen items-center justify-center"
+    >
       <p
         className="-z-10 flex h-full w-screen flex-col justify-center px-12 text-[20vw] text-secondary mix-blend-difference md:text-[15vw]"
         data-scroll

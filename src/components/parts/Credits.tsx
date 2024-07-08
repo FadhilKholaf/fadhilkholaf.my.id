@@ -7,7 +7,7 @@ export default function Credits() {
   return (
     <section
       id="credits"
-      className="flex min-h-screen flex-wrap items-center bg-primary py-12 pb-4 pl-12 pr-4 text-secondary"
+      className="flex min-h-screen w-screen flex-wrap items-center bg-primary py-12 pb-4 pl-12 pr-4 text-secondary md:pr-10"
     >
       <div className="flex w-full flex-wrap justify-between">
         <div className="mb-8 flex w-auto flex-col gap-y-4">
