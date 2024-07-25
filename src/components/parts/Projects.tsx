@@ -69,7 +69,7 @@ export default function Projects() {
       <h1 ref={headingRef} className="mb-8 text-5xl md:text-7xl">
         PROJECTS
       </h1>
-      <div className="flex h-full w-full flex-col text-base md:text-2xl">
+      <div className="flex h-full w-full flex-col lg:text-2xl">
         {projects &&
           projects.map((item, index) => (
             <ProjectItem

@@ -9,21 +9,21 @@ export const projects: Project[] = [
     imagePath: 'antareja.png'
   },
   {
-    title: 'UKL',
+    title: 'UKL XI Absen Ganjil',
     position: 'Backend',
     date: 'May, 2024',
     href: 'https://github.com/FadhilKholaf/UKL-Node-Backend-Ganjil',
     imagePath: 'ukl.png'
   },
   {
-    title: 'Three',
+    title: '123SNA',
     position: 'Frontend',
     date: 'June, 2024',
     href: 'https://3.fadhilkholaf.my.id',
     imagePath: '3.png'
   },
   {
-    title: 'DOT',
+    title: 'PT. DOT Intern Test',
     position: 'Backend',
     date: 'June, 2024',
     href: 'https://github.com/FadhilKholaf/dot-intern',
@@ -35,6 +35,20 @@ export const projects: Project[] = [
     date: 'June, 2024',
     href: 'https://hillaryours.fadhilkholaf.my.id',
     imagePath: 'hillaryours.png'
+  },
+  {
+    title: 'PT. INAGATA Intern Test',
+    position: 'Frontend',
+    date: 'July, 2024',
+    href: 'https://schools.fadhilkholaf.my.id',
+    imagePath: 'inagata.png'
+  },
+  {
+    title: 'SEFEST 2024 WebDev',
+    position: 'Fullstack',
+    date: 'July, 2024',
+    href: 'https://templarfeedforward.vercel.app',
+    imagePath: 'sefest2024.png'
   }
 ];
 
@@ -110,14 +124,4 @@ export const social: Credit[] = [
     category: 'LinkedIn',
     href: 'https://www.linkedin.com/in/fadhilkholaf'
   }
-  // {
-  //   name: 'fadhilkholaf',
-  //   category: 'TikTok',
-  //   href: 'https://www.tiktok.com/@fadhilkholaf'
-  // },
-  // {
-  //   name: 'fadhilkholaf',
-  //   category: 'X',
-  //   href: 'https://x.com/fadhilkholaf'
-  // }
 ];

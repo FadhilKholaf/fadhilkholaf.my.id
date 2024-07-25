@@ -24,7 +24,7 @@ export default function ProjectItem({
         <p className="invisible z-[1] w-0 text-nowrap text-end md:visible md:w-full">
           {date}
         </p>
-        <div className="pointer-events-none invisible absolute -top-full left-[20%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
+        <div className="pointer-events-none invisible absolute -top-full right-[18%] z-10 h-[20vh] w-[20vw] lg:group-hover:visible">
           <Image
             src={imagePath}
             alt={title}
