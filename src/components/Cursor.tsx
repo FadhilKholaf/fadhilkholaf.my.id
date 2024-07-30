@@ -41,7 +41,7 @@ export default function Cursor() {
   return (
     <span
       className={cn(
-        'cursor pointer-events-none invisible fixed z-[999] h-10 w-10 mix-blend-difference transition-all duration-300 ease-out before:absolute before:h-1 before:w-10 before:translate-y-[18px] before:rounded-full before:bg-secondary before:mix-blend-difference after:absolute after:h-1 after:w-10 after:translate-y-[18px] after:rotate-90 after:rounded-full after:bg-secondary after:mix-blend-difference lg:visible'
+        'cursor pointer-events-none invisible fixed z-[999] h-10 w-10 mix-blend-difference transition-all duration-300 ease-out before:absolute before:h-1 before:w-10 before:translate-y-[18px] before:bg-secondary before:mix-blend-difference after:absolute after:h-1 after:w-10 after:translate-y-[18px] after:rotate-90 after:bg-secondary after:mix-blend-difference lg:visible'
       )}
     ></span>
   );

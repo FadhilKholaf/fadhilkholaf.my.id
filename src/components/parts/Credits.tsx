@@ -11,18 +11,22 @@ export default function Credits() {
     >
       <div className="flex w-full flex-wrap justify-between">
         <div className="mb-8 flex w-auto flex-col gap-y-4">
-          <h1 className="text-5xl md:text-7xl">Inspired By</h1>
-          {inspiredBy &&
-            inspiredBy.map((item, index) => (
+          <h1 className="text-5xl md:text-7xl">Socials</h1>
+          {social &&
+            social.map((item, index) => (
               <CreditsItem
-                key={index}
-                category={item.category}
                 name={item.name}
                 href={item.href}
-                symbol="*"
+                category={item.category}
+                key={index}
+                symbol="@"
               />
             ))}
+          <span className="flex flex-wrap gap-4">
+            <span>fadhilgd123@gmail.com</span>
+          </span>
         </div>
+
         <div className="mb-8 flex w-auto flex-col gap-y-4">
           <h1 className="text-5xl md:text-7xl">Resources</h1>
           {resource &&
@@ -43,20 +47,17 @@ export default function Credits() {
           </span>
         </div>
         <div className="mb-8 flex w-auto flex-col gap-y-4">
-          <h1 className="text-5xl md:text-7xl">Socials</h1>
-          {social &&
-            social.map((item, index) => (
+          <h1 className="text-5xl md:text-7xl">Inspired By</h1>
+          {inspiredBy &&
+            inspiredBy.map((item, index) => (
               <CreditsItem
+                key={index}
+                category={item.category}
                 name={item.name}
                 href={item.href}
-                category={item.category}
-                key={index}
-                symbol="@"
+                symbol="*"
               />
             ))}
-          <span className="flex flex-wrap gap-4">
-            <span>fadhilgd123@gmail.com</span>
-          </span>
         </div>
       </div>
       <div className="relative h-[50vh] w-full rounded border border-secondary">

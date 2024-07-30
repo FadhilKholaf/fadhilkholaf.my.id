@@ -11,19 +11,19 @@ export default function Flower() {
       data-scroll-speed="0.3"
     >
       <Canvas performance={{ max: 0.1 }}>
-        <PerspectiveCamera makeDefault position={[3, 1, 0]} />
-        <ambientLight intensity={3} />
+        <PerspectiveCamera makeDefault position={[2, 1.5, 0]} />
+        <ambientLight intensity={4} />
         <OrbitControls
           autoRotate
-          autoRotateSpeed={2}
+          autoRotateSpeed={1}
           enableDamping={false}
           enablePan={false}
           enableRotate={false}
           enableZoom={false}
         />
-        <FlowerModel position={[0, -1.5, 0]} scale={[0.7, 0.7, 0.7]} />
+        <FlowerModel position={[0, -1.3, 0]} scale={[0.7, 0.7, 0.7]} />
         <EffectComposer>
-          <ASCII color="#F5F5F5" characters=" 10*#;" />
+          <ASCII characters=" .:-+*=%@#" color="#F5F5F5" cellSize={20} />
         </EffectComposer>
       </Canvas>
     </section>
