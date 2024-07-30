@@ -21,7 +21,7 @@ export default function Flower() {
           enableRotate={false}
           enableZoom={false}
         />
-        <FlowerModel position={[0, -1.3, 0]} scale={[0.7, 0.7, 0.7]} />
+        <FlowerModel position={[0, -1.7, 0]} scale={[0.7, 0.7, 0.7]} />
         <EffectComposer>
           <ASCII characters=" .:-+*=%@#" color="#F5F5F5" cellSize={20} />
         </EffectComposer>
