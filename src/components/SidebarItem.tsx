@@ -57,6 +57,7 @@ export function SidebarLinkItem({
   return (
     <Link
       href={href}
+      target="_blank"
       className={cn(
         'relative translate-x-8 -rotate-90 font-semibold transition-all duration-500 ease-out after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:ease-out hover:after:origin-left hover:after:scale-x-100',
         className,

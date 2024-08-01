@@ -25,7 +25,7 @@ export default function Sidebar() {
     }
 
     return () => clearTimeout(timeoutId);
-  }, []);
+  }, [loading]);
 
   return (
     <aside className="fixed z-50 flex h-screen w-8 flex-col items-center justify-center overflow-hidden bg-secondary text-primary md:w-12">
