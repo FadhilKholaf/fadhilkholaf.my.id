@@ -40,7 +40,9 @@ export default function Projects() {
 
       updateText(0);
 
-      return () => clearTimeout(timeout);
+      return () => {
+        clearTimeout(timeout);
+      };
     }
 
     const observer = new IntersectionObserver(
@@ -65,6 +67,8 @@ export default function Projects() {
       id="projects"
       ref={sectionRef}
       className="min-h-fit w-screen bg-primary py-12 pl-12 pr-4 text-secondary md:pr-10"
+      data-scroll
+      data-scroll-event-progress="progressEvent"
     >
       <h1 ref={headingRef} className="mb-8 text-5xl md:text-7xl">
         PROJECTS
@@ -79,6 +83,8 @@ export default function Projects() {
               date={item.date}
               href={item.href}
               imagePath={'/images/' + item.imagePath}
+              id={`animated-span${index}`}
+              index={index}
             />
           ))}
       </div>
