@@ -74,6 +74,11 @@ export const inspiredBy: Credit[] = [
     href: 'https://quentinhocde.com'
   },
   {
+    name: 'Olivier Larose',
+    category: 'Developer',
+    href: 'https://www.olivierlarose.com'
+  },
+  {
     name: 'Dragonfly',
     category: 'Venture',
     href: 'https://www.dragonfly.xyz'
