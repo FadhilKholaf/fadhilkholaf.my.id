@@ -39,8 +39,8 @@ export default function ProjectItem({
   return (
     <div
       className={cn(
-        'group relative flex h-full flex-col text-secondary transition-all delay-100 duration-100 ease-out hover:text-primary hover:delay-0',
-        { 'text-primary': index === opened }
+        'group relative flex h-full flex-col text-secondary transition-all duration-300 ease-in-out hover:text-primary hover:delay-0',
+        { 'hover:text-secondary': index === opened }
       )}
     >
       <div
@@ -57,7 +57,7 @@ export default function ProjectItem({
       </div>
       <div
         className={cn(
-          'relative z-10 h-0 w-full transition-[height] duration-300 ease-out',
+          'relative h-0 w-full transition-[height] duration-300 ease-out',
           {
             'h-[600px] sm:h-[500px] lg:h-[50vh]': index === opened
           }
@@ -68,7 +68,7 @@ export default function ProjectItem({
           alt={project.title}
           width={500}
           height={500}
-          quality={100}
+          quality={50}
           loading="lazy"
           className={cn(
             'pointer-events-none absolute z-10 h-0 w-0 object-cover object-top px-2 opacity-0 transition-all duration-300 ease-in-out lg:left-[62%] lg:h-fit lg:w-[20%] lg:-translate-y-1/2 lg:group-hover:opacity-100',
@@ -80,7 +80,7 @@ export default function ProjectItem({
         />
         <div
           className={cn(
-            'flex h-full w-full flex-col justify-between overflow-hidden px-2 opacity-0 transition-opacity lg:pl-[calc(30%+8px)]',
+            'z-10 flex h-full w-full flex-col justify-between overflow-hidden px-2 opacity-0 transition-opacity lg:pl-[calc(30%+8px)]',
             {
               'pt-[208px] opacity-100 lg:pt-4': index === opened
             }
@@ -88,9 +88,9 @@ export default function ProjectItem({
         >
           <p
             className={cn(
-              '-translate-y-full text-justify transition-transform duration-300',
+              '-translate-y-full text-justify transition-all duration-500 ease-out group-hover:text-primary',
               {
-                '-translate-y-0': index === opened
+                '-translate-y-0 group-hover:text-secondary': index === opened
               }
             )}
           >
@@ -120,13 +120,16 @@ export default function ProjectItem({
       </div>
       <span
         className={cn(
-          'absolute top-0 z-0 h-full w-full origin-bottom scale-y-0 bg-secondary transition-transform delay-100 duration-100 ease-out group-hover:origin-top group-hover:scale-y-100 group-hover:delay-0',
-          { 'scale-y-100': index === opened }
+          'absolute top-0 h-full w-full origin-bottom scale-y-0 bg-secondary transition-transform duration-300 ease-in-out group-hover:origin-top group-hover:scale-y-100 group-hover:delay-0',
+          {
+            'group-hover:scale-y-0 lg:group-hover:origin-bottom':
+              index === opened
+          }
         )}
       ></span>
       <span
         id={id}
-        className="absolute bottom-0 z-0 h-0.5 w-full origin-left scale-x-0 bg-secondary transition-transform duration-1000 ease-out"
+        className="absolute bottom-0 h-0.5 w-full origin-left scale-x-0 bg-secondary transition-transform duration-1000 ease-out"
         style={{ transform: 'scaleX(0)' }}
       ></span>
     </div>

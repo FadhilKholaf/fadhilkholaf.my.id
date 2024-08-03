@@ -8,10 +8,14 @@ export default function LocomotiveScrollProvider({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import('locomotive-scroll')).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
+    let scroll: import('locomotive-scroll');
+    import('locomotive-scroll').then((locomotiveModule) => {
+      scroll = new locomotiveModule.default();
+    });
+
+    return () => {
+      if (scroll) scroll.destroy();
+    };
   });
   return <>{children}</>;
 }
