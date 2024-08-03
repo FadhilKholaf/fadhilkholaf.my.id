@@ -6,7 +6,7 @@ import { ASCII, EffectComposer } from '@react-three/postprocessing';
 export default function Flower() {
   return (
     <section
-      className="fixed left-0 top-0 -z-20 h-screen w-screen"
+      className="fixed left-0 top-0 -z-20 hidden h-screen w-screen lg:block"
       data-scroll
       data-scroll-speed="0.3"
     >

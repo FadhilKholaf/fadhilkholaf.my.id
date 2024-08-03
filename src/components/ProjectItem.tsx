@@ -57,7 +57,7 @@ export default function ProjectItem({
         <span className="absolute bottom-0 z-0 h-full w-full origin-top scale-y-0 bg-secondary transition-transform delay-100 duration-100 ease-out group-hover:origin-bottom group-hover:scale-y-100 group-hover:delay-0"></span>
         <span
           id={id}
-          className="absolute bottom-0 z-0 h-0.5 w-full origin-left scale-x-0 bg-secondary transition-transform duration-1000 ease-in-out"
+          className="absolute bottom-0 z-0 h-0.5 w-full origin-left scale-x-0 bg-secondary transition-transform duration-[2000ms] ease-in-out"
           style={{ transform: 'scaleX(0)' }}
         ></span>
       </div>

@@ -19,7 +19,7 @@ export default function Sidebar() {
           }
           return prevProgress + 1;
         });
-      }, 10);
+      }, 1);
 
       return () => clearInterval(loadingInterval);
     }
@@ -30,7 +30,7 @@ export default function Sidebar() {
   return (
     <aside className="fixed z-50 flex h-screen w-8 flex-col items-center justify-center overflow-hidden bg-secondary text-primary md:w-12">
       <p className="fixed top-12 -rotate-90 text-nowrap font-semibold text-accent">
-        {progress === 100 ? 'Dev' : progress}
+        {progress === 100 || !loading ? 'Dev' : progress}
         <span className="animate-pulse">{' - /*'}</span>
       </p>
       <SidebarLinkItem
@@ -46,7 +46,7 @@ export default function Sidebar() {
       />
       <SidebarItem text="Credits" scrollTo="#credits" />
       <p className="fixed bottom-12 -rotate-90 text-nowrap font-semibold text-accent">
-        {progress === 100 ? 'Scroll' : 'Loading'}
+        {progress === 100 || !loading ? 'Scroll' : 'Loading'}
         <span className="animate-pulse">{' - />'}</span>
       </p>
     </aside>

@@ -11,6 +11,8 @@ import Intro from '@/components/Intro';
 import Cursor from '@/components/Cursor';
 import { useEffect, useState } from 'react';
 import { cn } from '@/utils/cn';
+import { ShootingStars } from '@/components/ui/ShootingStars';
+import { StarsBackground } from '@/components/ui/StarsBackground';
 
 export default function Page() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -28,6 +30,10 @@ export default function Page() {
       <main className="modal overflow-hidden md:pl-4">
         <Intro />
         <Home />
+        <section className="fixed top-0 -z-20 h-screen w-screen lg:hidden">
+          <ShootingStars />
+          <StarsBackground />
+        </section>
         <Flower />
         <Projects />
         <Credits />

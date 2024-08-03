@@ -40,7 +40,7 @@ export const projects: Project[] = [
     title: 'PT. INAGATA Intern Test',
     position: 'Frontend',
     date: 'July, 2024',
-    href: 'https://schools.fadhilkholaf.my.id',
+    href: 'https://style8.inagata.fadhilkholaf.my.id',
     imagePath: 'inagata.png'
   },
   {

@@ -1,5 +1,6 @@
-import { cn } from '@/utils/cn';
 import { useEffect, useState } from 'react';
+
+import { cn } from '@/utils/cn';
 
 export default function Cursor() {
   const [rotation, setRotation] = useState('');
