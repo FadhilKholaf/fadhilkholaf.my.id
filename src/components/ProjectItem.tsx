@@ -1,6 +1,10 @@
+"use client"
+
+import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react';
+
+import { cn } from '@/utils/cn';
 
 export default function ProjectItem({
   href,
@@ -9,7 +13,9 @@ export default function ProjectItem({
   date,
   imagePath,
   id,
-  index
+  index,
+  opened,
+  open
 }: {
   href: string;
   title: string;
@@ -18,6 +24,8 @@ export default function ProjectItem({
   imagePath: string;
   id: string;
   index: number;
+  opened: number | null;
+  open?: void;
 }) {
   useEffect(() => {
     const getProgress = (e: any) => {
@@ -36,8 +44,8 @@ export default function ProjectItem({
   }, [id, index]);
 
   return (
-    <Link href={href} target="_blank">
-      <div className="project group relative flex justify-between py-2 text-secondary transition-all delay-100 duration-100 ease-out hover:text-primary hover:delay-0">
+    <main className="">
+      <div className="project group relative flex cursor-pointer justify-between py-2 text-secondary transition-all delay-100 duration-100 ease-out hover:text-primary hover:delay-0">
         <p className="z-[1] w-full text-nowrap">{title}</p>
         <p className="z-[1] w-1/2 text-nowrap text-end md:text-center">
           {position}
@@ -61,6 +69,11 @@ export default function ProjectItem({
           style={{ transform: 'scaleX(0)' }}
         ></span>
       </div>
-    </Link>
+      <div
+        className={cn('h-0 w-full bg-white transition-all', {
+          'h-screen': index === opened
+        })}
+      ></div>
+    </main>
   );
 }

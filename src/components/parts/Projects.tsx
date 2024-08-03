@@ -1,17 +1,15 @@
-import { useEffect, useRef } from 'react';
-import '@/app/globals.css';
+import { useEffect, useState } from 'react';
+
 import { projects } from '@/utils/data';
 import ProjectItem from '../ProjectItem';
 
+import '@/app/globals.css';
+
 export default function Projects() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headingRef = useRef<HTMLHeadingElement>(null);
+  const [openProject, setOpenProject] = useState<number | null>(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const heading = headingRef.current;
-
-    if (!section || !heading) return;
+    const scrambleClass = 'scramble-text';
 
     function scrambleText(element: HTMLElement) {
       const chars = element.textContent!;
@@ -45,11 +43,15 @@ export default function Projects() {
       };
     }
 
+    const elements = document.querySelectorAll<HTMLElement>(
+      `.${scrambleClass}`
+    );
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            scrambleText(heading);
+            scrambleText(entry.target as HTMLElement);
             observer.unobserve(entry.target);
           }
         });
@@ -57,22 +59,27 @@ export default function Projects() {
       { threshold: 0.1 }
     );
 
-    observer.observe(section);
+    elements.forEach((element) => observer.observe(element));
 
     return () => observer.disconnect();
   }, []);
 
+  // () => {
+  //   if (openProject === index) {
+  //     setOpenProject(null);
+  //   } else {
+  //     setOpenProject(index);
+  //   }
+  // }}
+
   return (
     <section
       id="projects"
-      ref={sectionRef}
       className="min-h-fit w-screen bg-primary py-12 pl-12 pr-4 text-secondary md:pr-10"
       data-scroll
       data-scroll-event-progress="progressEvent"
     >
-      <h1 ref={headingRef} className="mb-8 text-5xl md:text-7xl">
-        PROJECTS
-      </h1>
+      <h1 className="scramble-text mb-8 text-5xl md:text-7xl">PROJECTS</h1>
       <div className="flex h-full w-full flex-col lg:text-2xl">
         {projects &&
           projects.map((item, index) => (
@@ -85,6 +92,7 @@ export default function Projects() {
               imagePath={'/images/' + item.imagePath}
               id={`animated-span${index}`}
               index={index}
+              opened={openProject}
             />
           ))}
       </div>

@@ -61,7 +61,7 @@ export default function Credits() {
         </div>
       </div>
       <div className="relative h-[50vh] w-full rounded border border-secondary">
-        <BackgroundBeams />
+        {/* <BackgroundBeams /> */}
       </div>
     </section>
   );

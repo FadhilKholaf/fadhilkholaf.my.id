@@ -1,11 +1,15 @@
 import { Analytics } from '@vercel/analytics/react';
-import type { Metadata } from 'next';
 import { Courier_Prime } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from 'next';
+
 import LocomotiveScrollProvider from '@/components/providers/LocomotiveScrollProvider';
 import { cn } from '@/utils/cn';
+import './globals.css';
 
-const courierPrime = Courier_Prime({ weight: '400', subsets: ['latin'] });
+const courierPrime = Courier_Prime({
+  weight: '400',
+  subsets: ['latin']
+});
 
 export const metadata: Metadata = {
   title: 'Fadhil Kholaf',
