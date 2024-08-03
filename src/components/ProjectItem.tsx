@@ -39,12 +39,12 @@ export default function ProjectItem({
   return (
     <div
       className={cn(
-        'group relative flex h-full flex-col text-secondary transition-all duration-300 ease-in-out hover:text-primary hover:delay-0',
-        { 'hover:text-secondary': index === opened }
+        'group relative flex h-full flex-col text-secondary transition-all duration-300 ease-in-out hover:delay-0 lg:hover:text-primary',
+        { 'lg:hover:text-secondary': index === opened }
       )}
     >
       <div
-        className="flex w-full cursor-pointer items-center justify-between px-2"
+        className="flex w-full cursor-pointer items-center justify-between lg:px-2"
         onClick={onClick}
       >
         <p className="z-[1] w-full text-nowrap py-2">{project.title}</p>
@@ -59,7 +59,7 @@ export default function ProjectItem({
         className={cn(
           'relative h-0 w-full transition-[height] duration-300 ease-out',
           {
-            'h-[600px] sm:h-[500px] lg:h-[50vh]': index === opened
+            'h-[450px] lg:h-[50vh]': index === opened
           }
         )}
       >
@@ -71,16 +71,16 @@ export default function ProjectItem({
           quality={50}
           loading="lazy"
           className={cn(
-            'pointer-events-none absolute z-10 h-0 w-0 object-cover object-top px-2 opacity-0 transition-all duration-300 ease-in-out lg:left-[62%] lg:h-fit lg:w-[20%] lg:-translate-y-1/2 lg:group-hover:opacity-100',
+            'pointer-events-none absolute z-10 h-0 w-0 object-cover object-top opacity-0 transition-all duration-300 ease-in-out lg:left-[62%] lg:h-fit lg:w-[20%] lg:-translate-y-1/2 lg:px-2 lg:group-hover:opacity-100',
             {
-              'h-[200px] w-full opacity-100 lg:left-0 lg:mt-4 lg:h-fit lg:w-[30%] lg:-translate-y-0':
+              'h-[200px] w-full opacity-100 lg:left-0 lg:mt-4 lg:h-fit lg:w-[30%] lg:-translate-y-0 right-0':
                 index === opened
             }
           )}
         />
         <div
           className={cn(
-            'z-10 flex h-full w-full flex-col justify-between overflow-hidden px-2 opacity-0 transition-opacity lg:pl-[calc(30%+8px)]',
+            'z-10 flex h-full w-full flex-col justify-between overflow-hidden opacity-0 transition-opacity lg:px-2 lg:pl-[calc(30%+8px)]',
             {
               'pt-[208px] opacity-100 lg:pt-4': index === opened
             }
@@ -88,7 +88,7 @@ export default function ProjectItem({
         >
           <p
             className={cn(
-              '-translate-y-full text-justify transition-all duration-500 ease-out group-hover:text-primary',
+              '-translate-y-full text-justify transition-all duration-300 ease-out group-hover:text-primary',
               {
                 '-translate-y-0 group-hover:text-secondary': index === opened
               }
@@ -120,9 +120,9 @@ export default function ProjectItem({
       </div>
       <span
         className={cn(
-          'absolute top-0 h-full w-full origin-bottom scale-y-0 bg-secondary transition-transform duration-300 ease-in-out group-hover:origin-top group-hover:scale-y-100 group-hover:delay-0',
+          'absolute top-0 h-full w-full origin-bottom scale-y-0 bg-secondary transition-transform duration-300 ease-in-out group-hover:origin-top lg:group-hover:scale-y-100',
           {
-            'group-hover:scale-y-0 lg:group-hover:origin-bottom':
+            'lg:group-hover:origin-bottom lg:group-hover:scale-y-0':
               index === opened
           }
         )}

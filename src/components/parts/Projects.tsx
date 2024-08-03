@@ -19,7 +19,7 @@ export default function Projects() {
         <h1 className="scramble-text text-5xl md:text-7xl">PROJECTS</h1>
         <p className="text-xs lg:text-base">Click for the details</p>
       </div>
-      <div className="flex h-full w-full flex-col lg:text-2xl">
+      <div className="flex h-full w-full flex-col text-sm sm:text-base lg:text-2xl">
         {projects &&
           projects.map((project, index) => (
             <ProjectItem
