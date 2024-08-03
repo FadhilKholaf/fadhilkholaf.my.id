@@ -10,7 +10,7 @@ export default function LocomotiveScrollProvider({
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
-      const locomotiveScroll = new LocomotiveScroll({ smoothTouch: true });
+      const locomotiveScroll = new LocomotiveScroll();
     })();
   });
   return <>{children}</>;
