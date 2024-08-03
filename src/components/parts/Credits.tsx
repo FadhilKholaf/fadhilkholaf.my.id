@@ -2,6 +2,11 @@ import Link from 'next/link';
 import { BackgroundBeams } from '@/components/ui/BackgroundBeams';
 import { inspiredBy, resource, social } from '@/utils/data';
 import CreditsItem from '../CreditsItem';
+import { BackgroundBoxes } from '../ui/BackgroundBoxes';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import { ASCII, EffectComposer } from '@react-three/postprocessing';
+import { StarsBackground } from '../ui/StarsBackground';
 
 export default function Credits() {
   return (
@@ -11,7 +16,7 @@ export default function Credits() {
     >
       <div className="flex w-full flex-wrap justify-between">
         <div className="mb-8 flex w-auto flex-col gap-y-4">
-          <h1 className="text-5xl md:text-7xl">Socials</h1>
+          <h1 className="scramble-text text-5xl md:text-7xl">Socials</h1>
           {social &&
             social.map((item, index) => (
               <CreditsItem
@@ -28,7 +33,7 @@ export default function Credits() {
         </div>
 
         <div className="mb-8 flex w-auto flex-col gap-y-4">
-          <h1 className="text-5xl md:text-7xl">Resources</h1>
+          <h1 className="scramble-text text-5xl md:text-7xl">Resources</h1>
           {resource &&
             resource.map((item, index) => (
               <CreditsItem
@@ -47,7 +52,7 @@ export default function Credits() {
           </span>
         </div>
         <div className="mb-8 flex w-auto flex-col gap-y-4">
-          <h1 className="text-5xl md:text-7xl">Inspired By</h1>
+          <h1 className="scramble-text text-5xl md:text-7xl">Inspired By</h1>
           {inspiredBy &&
             inspiredBy.map((item, index) => (
               <CreditsItem
@@ -60,8 +65,24 @@ export default function Credits() {
             ))}
         </div>
       </div>
-      <div className="relative h-[50vh] w-full rounded border border-secondary">
-        {/* <BackgroundBeams /> */}
+      <div className="relative h-[50vh] w-full overflow-hidden rounded border border-secondary">
+        <Canvas performance={{ max: 0.1 }}>
+          <PerspectiveCamera makeDefault position={[2, 1.5, 0]} />
+          <OrbitControls
+            autoRotate
+            autoRotateSpeed={2}
+            enablePan={false}
+            enableZoom={false}
+          />
+          <mesh scale={1.5}>
+            <boxGeometry />
+            <meshNormalMaterial />
+          </mesh>
+          <EffectComposer>
+            <ASCII characters=" .-+*=%@#" color="#F5F5F5" cellSize={20} />
+          </EffectComposer>
+        </Canvas>
+        <StarsBackground className="pointer-events-none" />
       </div>
     </section>
   );

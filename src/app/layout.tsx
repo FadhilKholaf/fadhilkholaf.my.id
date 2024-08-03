@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import LocomotiveScrollProvider from '@/components/providers/LocomotiveScrollProvider';
 import { cn } from '@/utils/cn';
 import './globals.css';
+import ScrambleTextProvider from '@/components/providers/ScrambleTextProvider';
 
 const courierPrime = Courier_Prime({
   weight: '400',
@@ -24,10 +25,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden bg-primary">
+    <html lang="en" className="select-none overflow-x-hidden bg-primary">
       <body className={cn(courierPrime.className)}>
         <LocomotiveScrollProvider>
-          {children}
+          <ScrambleTextProvider>{children}</ScrambleTextProvider>
           <Analytics />
         </LocomotiveScrollProvider>
       </body>

@@ -2,53 +2,70 @@ import { Credit, Project } from './types';
 
 export const projects: Project[] = [
   {
+    imagePath: 'antareja.png',
     title: 'Antareja',
     position: 'Frontend',
     date: 'May, 2024',
-    href: 'https://antareja.smktelkom-mlg.sch.id',
-    imagePath: 'antareja.png'
+    description:
+      'A website for register and maintaining ANTAREJA event in SMK Telkom Malang, writen with Next JS, Prisma ORM, and Postgre SQL for the database',
+    preview: 'https://antareja.smktelkom-mlg.sch.id',
+    source: 'https://github.com/mokletdev/antareja'
   },
   {
+    imagePath: 'ukl.png',
     title: 'UKL XI Absen Ganjil',
     position: 'Backend',
     date: 'May, 2024',
-    href: 'https://github.com/FadhilKholaf/UKL-Node-Backend-Ganjil',
-    imagePath: 'ukl.png'
+    description:
+      'A backend program for level up requirement test 11th grade student in SMK Telkom Malang, writen with Node JS Express',
+    source: 'https://github.com/FadhilKholaf/UKL-Node-Backend-Ganjil'
   },
   {
+    imagePath: '3.png',
     title: '123SNA',
     position: 'Frontend',
     date: 'June, 2024',
-    href: 'https://3.fadhilkholaf.my.id',
-    imagePath: '3.png'
+    description:
+      'A simple animation implemented on website for learning purpose and for my crush (I hope She know this 😹), writen with Vite React JS',
+    preview: 'https://3.fadhilkholaf.my.id'
   },
   {
+    imagePath: 'dot.png',
     title: 'PT. DOT Intern Test',
     position: 'Backend',
     date: 'June, 2024',
-    href: 'https://github.com/FadhilKholaf/dot-intern',
-    imagePath: 'dot.png'
+    description:
+      'A backend program writen with Nest JS for applying to PT. DOT intern program',
+    source: 'https://github.com/FadhilKholaf/dot-intern'
   },
   {
+    imagePath: 'hillaryours.png',
     title: 'Hillaryours',
     position: 'Frontend',
     date: 'June, 2024',
-    href: 'https://hillaryours.fadhilkholaf.my.id',
-    imagePath: 'hillaryours.png'
+    description: 'A site for Hillary Abigail Fanbase, writen with Next JS',
+    preview: 'https://hillaryours.fadhilkholaf.my.id',
+    source: 'https://github.com/FadhilKholaf/hillaryours'
   },
   {
+    imagePath: 'inagata.png',
     title: 'PT. INAGATA Intern Test',
     position: 'Frontend',
     date: 'July, 2024',
-    href: 'https://style8.inagata.fadhilkholaf.my.id',
-    imagePath: 'inagata.png'
+    description:
+      'A frontend site for applying to the PT. INAGATA intern program, writen with Next JS',
+    preview: 'https://style8.inagata.fadhilkholaf.my.id',
+    source: 'https://github.com/FadhilKholaf/PT-INAGATA-Frontend-Test'
   },
   {
+    imagePath: 'sefest2024.png',
     title: 'SEFEST 2024 WebDev',
     position: 'Fullstack',
     date: 'July, 2024',
-    href: 'https://templarfeedforward.vercel.app',
-    imagePath: 'sefest2024.png'
+    description:
+      'A fullstack site writen using Next JS for SEFEST 2024 competition held by Telkom University Surabaya',
+    preview: 'https://templarfeedforward.vercel.app',
+    source: 'https://github.com/ahsanzizan/SEFEST24WEBDEV_Templar'
   }
 ];
 

@@ -1,33 +1,26 @@
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import { FlowerModel } from './ui/FlowerModel';
 import { ASCII, EffectComposer } from '@react-three/postprocessing';
 
-export default function Flower() {
+export default function Three() {
   return (
-    <section
-      className="fixed left-0 top-0 -z-20 hidden h-screen w-screen lg:block"
-      data-scroll
-      data-scroll-speed="0.3"
-    >
+    <section className="fixed left-0 top-0 -z-20 hidden h-screen w-screen lg:block">
       <Canvas performance={{ max: 0.1 }}>
         <PerspectiveCamera makeDefault position={[2, 1.5, 0]} />
-        <ambientLight intensity={4} />
         <OrbitControls
           autoRotate
-          autoRotateSpeed={1}
+          autoRotateSpeed={2}
           enableDamping={false}
           enablePan={false}
           enableRotate={false}
           enableZoom={false}
         />
-        <mesh>
-          <boxGeometry />
+        <mesh scale={[0.8, 0.8, 0.8]}>
+          <sphereGeometry />
           <meshNormalMaterial />
         </mesh>
-        {/* <FlowerModel position={[0, -1.7, 0]} scale={[0.7, 0.7, 0.7]} /> */}
         <EffectComposer>
-          <ASCII characters=" .:-+*=%@#" color="#F5F5F5" cellSize={10} />
+          <ASCII characters=" .-+*=%@#" color="#F5F5F5" />
         </EffectComposer>
       </Canvas>
     </section>

@@ -1,31 +1,24 @@
-"use client"
+'use client';
 
 import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { cn } from '@/utils/cn';
+import { Project } from '@/utils/types';
 
 export default function ProjectItem({
-  href,
-  title,
-  position,
-  date,
-  imagePath,
+  project,
   id,
   index,
   opened,
-  open
+  onClick
 }: {
-  href: string;
-  title: string;
-  position: string;
-  date: string;
-  imagePath: string;
   id: string;
   index: number;
   opened: number | null;
-  open?: void;
+  onClick: () => void;
+  project: Project;
 }) {
   useEffect(() => {
     const getProgress = (e: any) => {
@@ -44,36 +37,98 @@ export default function ProjectItem({
   }, [id, index]);
 
   return (
-    <main className="">
-      <div className="project group relative flex cursor-pointer justify-between py-2 text-secondary transition-all delay-100 duration-100 ease-out hover:text-primary hover:delay-0">
-        <p className="z-[1] w-full text-nowrap">{title}</p>
-        <p className="z-[1] w-1/2 text-nowrap text-end md:text-center">
-          {position}
+    <div
+      className={cn(
+        'group relative flex h-full flex-col text-secondary transition-all delay-100 duration-100 ease-out hover:text-primary hover:delay-0',
+        { 'text-primary': index === opened }
+      )}
+    >
+      <div
+        className="flex w-full cursor-pointer items-center justify-between px-2"
+        onClick={onClick}
+      >
+        <p className="z-[1] w-full text-nowrap py-2">{project.title}</p>
+        <p className="z-[1] w-1/2 text-nowrap py-2 text-end md:text-center">
+          {project.position}
         </p>
-        <p className="invisible z-[1] w-0 text-nowrap text-end md:visible md:w-full">
-          {date}
+        <p className="invisible z-[1] w-0 text-nowrap py-2 text-end md:visible md:w-full">
+          {project.date}
         </p>
-        <div className="pointer-events-none invisible absolute -top-full right-[18%] z-10 h-fit w-[20vw] lg:group-hover:visible">
-          <Image
-            src={imagePath}
-            alt={title}
-            width={500}
-            height={500}
-            className="h-full object-cover"
-          />
-        </div>
-        <span className="absolute bottom-0 z-0 h-full w-full origin-top scale-y-0 bg-secondary transition-transform delay-100 duration-100 ease-out group-hover:origin-bottom group-hover:scale-y-100 group-hover:delay-0"></span>
-        <span
-          id={id}
-          className="absolute bottom-0 z-0 h-0.5 w-full origin-left scale-x-0 bg-secondary transition-transform duration-[2000ms] ease-in-out"
-          style={{ transform: 'scaleX(0)' }}
-        ></span>
       </div>
       <div
-        className={cn('h-0 w-full bg-white transition-all', {
-          'h-screen': index === opened
-        })}
-      ></div>
-    </main>
+        className={cn(
+          'relative z-10 h-0 w-full transition-[height] duration-300 ease-out',
+          {
+            'h-[600px] sm:h-[500px] lg:h-[50vh]': index === opened
+          }
+        )}
+      >
+        <Image
+          src={'/images/' + project.imagePath}
+          alt={project.title}
+          width={500}
+          height={500}
+          quality={100}
+          loading="lazy"
+          className={cn(
+            'pointer-events-none absolute z-10 h-0 w-0 object-cover object-top px-2 opacity-0 transition-all duration-300 ease-in-out lg:left-[62%] lg:h-fit lg:w-[20%] lg:-translate-y-1/2 lg:group-hover:opacity-100',
+            {
+              'h-[200px] w-full opacity-100 lg:left-0 lg:mt-4 lg:h-fit lg:w-[30%] lg:-translate-y-0':
+                index === opened
+            }
+          )}
+        />
+        <div
+          className={cn(
+            'flex h-full w-full flex-col justify-between overflow-hidden px-2 opacity-0 transition-opacity lg:pl-[calc(30%+8px)]',
+            {
+              'pt-[208px] opacity-100 lg:pt-4': index === opened
+            }
+          )}
+        >
+          <p
+            className={cn(
+              '-translate-y-full text-justify transition-transform duration-300',
+              {
+                '-translate-y-0': index === opened
+              }
+            )}
+          >
+            {project.description}
+          </p>
+          <div className="mb-6 flex justify-end gap-x-8 lg:mb-12 lg:gap-x-16">
+            {project.source && (
+              <Link
+                className="group flex w-fit gap-x-2"
+                href={project.source}
+                target="_blank"
+              >
+                Source<span className="text-accent">⇗</span>
+              </Link>
+            )}
+            {project.preview && (
+              <Link
+                className="group flex w-fit gap-x-2"
+                href={project.preview}
+                target="_blank"
+              >
+                Preview<span className="text-accent">⇗</span>
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+      <span
+        className={cn(
+          'absolute top-0 z-0 h-full w-full origin-bottom scale-y-0 bg-secondary transition-transform delay-100 duration-100 ease-out group-hover:origin-top group-hover:scale-y-100 group-hover:delay-0',
+          { 'scale-y-100': index === opened }
+        )}
+      ></span>
+      <span
+        id={id}
+        className="absolute bottom-0 z-0 h-0.5 w-full origin-left scale-x-0 bg-secondary transition-transform duration-1000 ease-out"
+        style={{ transform: 'scaleX(0)' }}
+      ></span>
+    </div>
   );
 }

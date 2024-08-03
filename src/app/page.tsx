@@ -2,7 +2,7 @@
 
 import Sidebar from '@/components/Sidebar';
 import Home from '@/components/parts/Home';
-import Flower from '@/components/Flower';
+import Three from '@/components/Three';
 import Projects from '@/components/parts/Projects';
 import Header from '@/components/Header';
 import Credits from '@/components/parts/Credits';
@@ -30,11 +30,11 @@ export default function Page() {
       <main className="modal overflow-hidden md:pl-4">
         <Intro />
         <Home />
-        <section className="fixed top-0 -z-20 h-screen w-screen lg:hidden">
-          <ShootingStars />
+        <section className="fixed top-0 -z-20 h-screen w-screen">
+          <ShootingStars className="lg:hidden" />
           <StarsBackground />
         </section>
-        <Flower />
+        <Three />
         <Projects />
         <Credits />
       </main>

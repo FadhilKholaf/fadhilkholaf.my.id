@@ -1,9 +1,11 @@
 export interface Project {
-  href: string;
+  imagePath: string;
   title: string;
   position: string;
   date: string;
-  imagePath: string;
+  description: string;
+  preview?: string;
+  source?: string;
 }
 
 export interface Credit {
