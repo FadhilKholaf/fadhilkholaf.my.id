@@ -73,7 +73,7 @@ export default function ProjectItem({
           className={cn(
             'pointer-events-none absolute z-10 h-0 w-0 object-cover object-top opacity-0 transition-all duration-300 ease-in-out lg:left-[62%] lg:h-fit lg:w-[20%] lg:-translate-y-1/2 lg:px-2 lg:group-hover:opacity-100',
             {
-              'h-[200px] w-full opacity-100 lg:left-0 lg:mt-4 lg:h-fit lg:w-[30%] lg:-translate-y-0 right-0':
+              'right-0 h-[200px] w-full opacity-100 lg:left-0 lg:mt-4 lg:h-fit lg:w-[30%] lg:-translate-y-0':
                 index === opened
             }
           )}
@@ -88,7 +88,7 @@ export default function ProjectItem({
         >
           <p
             className={cn(
-              '-translate-y-full text-justify transition-all duration-300 ease-out group-hover:text-primary',
+              '-translate-y-full text-justify transition-all duration-300 ease-in-out group-hover:text-primary',
               {
                 '-translate-y-0 group-hover:text-secondary': index === opened
               }
