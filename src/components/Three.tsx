@@ -15,12 +15,16 @@ export default function Three() {
           enableRotate={false}
           enableZoom={false}
         />
-        <mesh scale={[0.8, 0.8, 0.8]}>
-          <sphereGeometry />
+        <mesh scale={1}>
+          <icosahedronGeometry args={[1, 2]} />
           <meshNormalMaterial />
         </mesh>
         <EffectComposer>
-          <ASCII characters=" .-+*=%@#" color="#F5F5F5" />
+          <ASCII
+            characters=" .:*-+'!@#$%^&TRISNAmahasiwi"
+            color="#F5F5F5"
+            fontSize={40}
+          />
         </EffectComposer>
       </Canvas>
     </section>

@@ -16,7 +16,7 @@ export default function Credits() {
     >
       <div className="flex w-full flex-wrap justify-between">
         <div className="mb-8 flex w-auto flex-col gap-y-4">
-          <h1 className="scramble-text text-5xl md:text-7xl">Socials</h1>
+          <h1 className="text-5xl md:text-7xl">Socials</h1>
           {social &&
             social.map((item, index) => (
               <CreditsItem
@@ -33,7 +33,7 @@ export default function Credits() {
         </div>
 
         <div className="mb-8 flex w-auto flex-col gap-y-4">
-          <h1 className="scramble-text text-5xl md:text-7xl">Resources</h1>
+          <h1 className="text-5xl md:text-7xl">Resources</h1>
           {resource &&
             resource.map((item, index) => (
               <CreditsItem
@@ -52,7 +52,7 @@ export default function Credits() {
           </span>
         </div>
         <div className="mb-8 flex w-auto flex-col gap-y-4">
-          <h1 className="scramble-text text-5xl md:text-7xl">Inspired By</h1>
+          <h1 className="text-5xl md:text-7xl">Inspired By</h1>
           {inspiredBy &&
             inspiredBy.map((item, index) => (
               <CreditsItem

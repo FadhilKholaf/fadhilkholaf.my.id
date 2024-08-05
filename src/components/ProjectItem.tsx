@@ -68,7 +68,7 @@ export default function ProjectItem({
           alt={project.title}
           width={500}
           height={500}
-          quality={50}
+          quality={25}
           loading="lazy"
           className={cn(
             'pointer-events-none absolute z-10 h-0 w-0 object-cover object-top opacity-0 transition-all duration-300 ease-in-out lg:left-[62%] lg:h-fit lg:w-[20%] lg:-translate-y-1/2 lg:px-2 lg:group-hover:opacity-100',
