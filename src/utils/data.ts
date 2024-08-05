@@ -22,11 +22,11 @@ export const projects: Project[] = [
   },
   {
     imagePath: '3.png',
-    title: '123SNA',
+    title: 'Simple Animation',
     position: 'Frontend',
     date: 'June, 2024',
     description:
-      'A simple animation implemented on website for learning purpose and for my crush (I hope She know this 😹), writen with Vite React JS',
+      'A simple animation implemented on website for learning purpose, writen with Vite React JS',
     preview: 'https://3.fadhilkholaf.my.id'
   },
   {

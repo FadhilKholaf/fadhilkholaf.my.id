@@ -21,7 +21,7 @@ export default function Three() {
         </mesh>
         <EffectComposer>
           <ASCII
-            characters=" .:*-+'!@#$%^&TRISNAmahasiwi"
+            characters=" ialwaysthingkingaboutyou"
             color="#F5F5F5"
             fontSize={40}
           />
