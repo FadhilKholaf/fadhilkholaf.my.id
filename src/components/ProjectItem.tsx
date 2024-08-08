@@ -39,7 +39,7 @@ export default function ProjectItem({
   return (
     <div
       className={cn(
-        'group relative flex h-full flex-col text-secondary transition-all duration-300 ease-in-out hover:delay-0 lg:hover:text-primary',
+        'group relative flex h-full flex-col text-secondary transition-all duration-300 ease-in-out lg:hover:text-primary',
         { 'lg:hover:text-secondary': index === opened }
       )}
     >
@@ -88,7 +88,7 @@ export default function ProjectItem({
         >
           <p
             className={cn(
-              '-translate-y-full text-justify transition-all duration-300 ease-in-out group-hover:text-primary',
+              '-translate-y-full text-justify transition-all duration-500 ease-out group-hover:text-primary',
               {
                 '-translate-y-0 group-hover:text-secondary': index === opened
               }
@@ -120,7 +120,7 @@ export default function ProjectItem({
       </div>
       <span
         className={cn(
-          'absolute top-0 h-full w-full origin-bottom scale-y-0 bg-secondary transition-transform duration-300 ease-in-out group-hover:origin-top lg:group-hover:scale-y-100',
+          'absolute top-0 h-full w-full origin-bottom scale-y-0 bg-secondary transition-transform duration-100 ease-out group-hover:origin-top lg:group-hover:scale-y-100',
           {
             'lg:group-hover:origin-bottom lg:group-hover:scale-y-0':
               index === opened
@@ -129,7 +129,7 @@ export default function ProjectItem({
       ></span>
       <span
         id={id}
-        className="absolute bottom-0 h-0.5 w-full origin-left scale-x-0 bg-secondary transition-transform duration-1000 ease-out"
+        className="absolute bottom-0 h-0.5 w-full origin-left scale-x-0 bg-secondary transition-transform duration-100 ease-out"
         style={{ transform: 'scaleX(0)' }}
       ></span>
     </div>

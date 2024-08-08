@@ -11,7 +11,6 @@ import Intro from '@/components/Intro';
 import Cursor from '@/components/Cursor';
 import { useEffect, useState } from 'react';
 import { cn } from '@/utils/cn';
-import { ShootingStars } from '@/components/ui/ShootingStars';
 import { StarsBackground } from '@/components/ui/StarsBackground';
 
 export default function Page() {
@@ -31,7 +30,6 @@ export default function Page() {
         <Intro />
         <Home />
         <section className="fixed top-0 -z-20 h-screen w-screen">
-          <ShootingStars className="lg:hidden" />
           <StarsBackground />
         </section>
         <Three />
